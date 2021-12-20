@@ -1,0 +1,34 @@
+﻿l_english:
+
+ #########################
+ # DECISION LOCALISATION #
+ #########################
+
+    # The Empire of Mexico
+
+      mr_the_empire_of_mexico_title: "The Empire of Mexico"
+      mr_the_empire_of_mexico_desc: "We have secured the vital lands of Mexico and are truly a nation able to claim the status of Empire!"
+
+    # Catholic Revival
+
+      mr_catholic_revival_title: "Revive Catholisism in Mexico"
+      mr_catholic_revival_desc: "We must restore catholic rule to Mexico and now allow heathens and heratics to rule this land!"
+
+    # Found Mexico City
+
+      mr_found_mexico_city_title: "Foundation of Mexico City"
+      mr_found_mexico_city_desc: "We own many rich lands, but our capital is the most prosperous of them all.\n\nOur glorious nation deserves a historical name for it's capital and as such we shall rename the capital to 'Mexico City' and improve local infrastructure for all to enjoy."
+
+ #########################
+ # TOOLTIPS LOCALISATION #
+ #########################
+
+    mr_mexico_random_catholic_conversion_tt: "Various provinces will be converted to §YCatholic§!"
+
+ #############################
+ # FLAG TOOLTIP LOCALISATION #
+ ############################$
+
+    mr_proclaimed_mexican_empire: "Proclaimed Mexican Empire"
+
+    mr_founded_mexico_city: "Founded Mexico City"

@@ -1,0 +1,93 @@
+# Mexico Reworked - By JihadiJackass Studios
+
+country_decisions = {
+
+	# The Empire of Mexico
+
+		mr_the_empire_of_mexico = {
+			potential = {
+				tag = MEX
+				is_subject = no
+				NOT = {
+					has_country_flag = mr_proclaimed_mexican_empire
+					government_Rank = 3
+				}
+				num_of_owned_provinces_with = {
+					value = 5
+					colonial_region = colonial_mexico
+				}
+			}
+			provinces_to_highlight = {
+				OR = {
+					colonial_region = colonial_mexico
+				}
+				OR = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+			}
+			allow = {
+				adm_tech = 10
+				stability = 1
+				num_of_owned_provinces_with = {
+					value = 45
+					colonial_region = colonial_mexico
+				}
+			}
+			effect = {
+				set_government_rank = 3
+			}
+			ai_will_do = {
+				factor = 1
+			}
+			ai_importance = 400
+		}
+
+	# The Catholic Revival (If mexico is not Catholic, they recieve a decision to change to catholic)
+
+
+
+	# Found The Mexican Catholic Church (Random Provines become Catholic)
+
+
+
+	# Foundation of Mexico City
+
+	mr_found_mexico_city = {
+		potential = {
+			tag = MEX
+			is_subject = no
+			NOT = {
+				has_country_flag = mr_founded_mexico_city
+			}
+			owns = 852
+		}
+		allow = {
+			NOT = {
+				has_country_flag = mr_founded_mexico_city
+			}
+			stability = 1
+			prestige = 80
+			owns = 852
+		}
+		effect = {
+			add_prestige = 10
+			852 = {
+				rename_capital = "Mexico City"
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+
+	# Proclaim the Empire of Mexico - Renames country to Empire of Mexico (Requires Empire rank)
+
+	#	mr_proclaim_the_empire_of_mexico = {
+	#	}
+
+}
