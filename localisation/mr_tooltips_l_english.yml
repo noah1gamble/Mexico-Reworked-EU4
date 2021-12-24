@@ -1,0 +1,22 @@
+﻿l_english:
+
+ #########################
+ # TOOLTIPS LOCALISATION #
+ #########################
+
+    mr_mexico_random_catholic_conversion_tt: "Various provinces will be converted to §YCatholic§! and gain §R10.00§! unrest."
+
+    mr_unlocked_founded_mexican_empire_tt: "Enables the §YFounded Mexican Empire§! country flag"
+
+
+ #############################
+ # FLAG TOOLTIP LOCALISATION #
+ ############################$
+
+    mr_proclaimed_mexican_empire: "Proclaimed Mexican Empire"
+
+    mr_founded_mexico_city: "Founded Mexico City"
+
+    mr_founded_mexican_catholic_church: "Founded Mexican Catholic Church"
+
+    mr_founded_mexican_empire: "Founded Mexican Empire"

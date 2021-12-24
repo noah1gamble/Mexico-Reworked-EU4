@@ -19,16 +19,17 @@
       mr_found_mexico_city_title: "Foundation of Mexico City"
       mr_found_mexico_city_desc: "We own many rich lands, but our capital is the most prosperous of them all.\n\nOur glorious nation deserves a historical name for it's capital and as such we shall rename the capital to 'Mexico City' and improve local infrastructure for all to enjoy."
 
- #########################
- # TOOLTIPS LOCALISATION #
- #########################
+    # Found The Mexican Catholic Church
 
-    mr_mexico_random_catholic_conversion_tt: "Various provinces will be converted to §YCatholic§!"
+      mr_found_the_mexican_catholic_church_title: "The Mexican Catholic Church"
+      mr_found_the_mexican_catholic_church_desc: ""
 
- #############################
- # FLAG TOOLTIP LOCALISATION #
- ############################$
+    # Proclaim the Empire of Mexico
 
-    mr_proclaimed_mexican_empire: "Proclaimed Mexican Empire"
+      mr_proclaim_empire_of_mexico_title: "Proclaim the Empire of Mexico"
+      mr_proclaim_empire_of_mexico_desc: "All nations will be aware of our national pride and power!"
 
-    mr_founded_mexico_city: "Founded Mexico City"
+    # Cultural Divide
+
+      mr_cultural_divide_title: "Mexican Cultural Divide"
+      mr_cultural_divide_desc: "Our populace is anything but Mexican.. This is an unacceptable situation and must be dealt with severely!"

@@ -1,0 +1,18 @@
+﻿l_english:
+
+    # Foundation of Empire of Mexico
+
+      mr_events.1: "Mexican Identity Debate"
+      mr_events.1.t: "Mexican Identity Debate"
+      mr_events.1.d: "After much debate it has come to our attention that as an empire, we lack the formal recognition of other Great Powers as such, it is perhaps best to let these fools know of the greatness of Mexico!\n\nWe can change our name to either the Empire of Mexico, or the Mexican Empire; or not worry about such petty imperialist nonsense."
+      mr_events.1.a: "The Empire of Mexico!"
+      mr_events.1.b: "The Mexican Empire!"
+      mr_events.1.c: "Remain as Mexico."
+
+    # The Mass Conversion of Mexico
+
+      mr_events.2: "Mass Conversion of Mexico"
+      mr_events.2.t: "Mass Conversion of Mexico"
+      mr_events.2.d: "With the passing of a new national policy enacting the state religion as Catholic many people are prepared to revolt, but there is much to be done and little time to worry about such things.\nall that matters now is the Church and God."
+      mr_events.2.a: "All heretics must die!"
+      mr_events.2.b: "We will achieve harmony through peace."

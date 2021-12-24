@@ -1,0 +1,10 @@
+spriteTypes = {
+
+	# Catedral Metropolitana
+
+	spriteType = {
+		name = "GFX_great_project_catedral_metropolitana"
+		texturefile = "gfx//interface//great_projects//great_project_catedral_metropolitana.dds"
+	}
+
+}
