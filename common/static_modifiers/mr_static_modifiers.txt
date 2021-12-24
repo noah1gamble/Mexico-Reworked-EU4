@@ -1,0 +1,5 @@
+# Mexico: Reworked Static Modifiers
+
+mr_foundation_of_the_mexican_catholic_church_modifier = {
+	great_project_upgrade_cost = -0.20
+}

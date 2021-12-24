@@ -1,448 +1,482 @@
 
 	namespace = mr_events
 
-	# Proclaim the Empire of Mexico
+	# Mexican Identity Debate
 
-	country_event = {
-		id = mr_events.1
-		title = "mr_events.1.t"
-		desc = "mr_events.1.d"
-		picture = ANGRY_MOB_eventPicture
+		country_event = {
+			id = mr_events.1
+			title = "mr_events.1.t"
+			desc = "mr_events.1.d"
+			picture = REFORM_eventPicture
 
-		is_triggered_only = yes
+			is_triggered_only = yes
 
-		major = yes
+			major = yes
 
-		option = {
-			name = "mr_events.1.a"
-			set_country_flag = mr_proclaim_empire_of_mexico
-			ai_chance = { factor = 45 }
-			override_country_name = mr_empire_of_mexico
-			add_prestige = 5
+			option = {
+				name = "mr_events.1.a"
+				set_country_flag = mr_proclaim_empire_of_mexico
+				ai_chance = { factor = 45 }
+				override_country_name = mr_empire_of_mexico
+				add_prestige = 5
+			}
+
+			option = {
+				name = "mr_events.1.b"
+				ai_chance = { factor = 45 }
+				set_country_flag = mr_proclaim_empire_of_mexico
+				override_country_name = mr_mexican_empire
+				add_prestige = 5
+			}
+
+			option = {
+				name = "mr_events.1.c"
+				ai_chance = { factor = 10 }
+				set_country_flag = mr_did_not_proclaim_empire_of_mexico
+				add_stability = 1
+				add_prestige = 20
+			}
 		}
-
-		option = {
-			name = "mr_events.1.b"
-			ai_chance = { factor = 45 }
-			set_country_flag = mr_proclaim_empire_of_mexico
-			override_country_name = mr_mexican_empire
-			add_prestige = 5
-		}
-
-		option = {
-			name = "mr_events.1.c"
-			ai_chance = { factor = 10 }
-			set_country_flag = mr_did_not_proclaim_empire_of_mexico
-			add_stability = 1
-			add_prestige = 20
-		}
-	}
 
 	# Mass Conversion of Mexico (Converts various provinces, can spawn rebels)
 
-	country_event = {
-		id = mr_events.2
-		title = "mr_events.2.t"
-		desc = "mr_events.2.d"
-		picture = RELIGION_eventPicture
+		country_event = {
+			id = mr_events.2
+			title = "mr_events.2.t"
+			desc = "mr_events.2.d"
+			picture = RELIGION_eventPicture
 
-		is_triggered_only = yes
+			is_triggered_only = yes
 
-		option = { # Aggressive Conversion
-			name = "mr_events.2.a"
-			ai_chance = { factor = 35 }
-			set_country_flag = mr_aggressive_conversion
-			add_prestige = -10
-			add_ruler_personality = zealot_personality
-			custom_tooltip = mr_mexico_random_catholic_conversion_tt
-			hidden_effect = { # Convert (random list with low, high amount of conversion)
-				random_list = {
-					50 = { # Highly Aggressive (20 provinces)
-						random_owned_province = {
-							limit = {
-								NOT = {
-									religion = catholic
-									has_province_flag = mr_mass_conversion_accepted
+			option = { # Aggressive Conversion
+				name = "mr_events.2.a"
+				ai_chance = { factor = 35 }
+				set_country_flag = mr_aggressive_conversion
+				add_prestige = -10
+				add_ruler_personality = zealot_personality
+				custom_tooltip = mr_mexico_random_catholic_conversion_tt
+				hidden_effect = { # Convert (random list with low, high amount of conversion)
+					random_list = {
+						50 = { # Highly Aggressive (20 provinces)
+							random_owned_province = {
+								limit = {
+									NOT = {
+										religion = catholic
+										has_province_flag = mr_mass_conversion_accepted
+									}
 								}
+								set_province_flag = mr_mass_conversion_accepted
+								change_religion = catholic
+								add_unrest = 10
 							}
-							set_province_flag = mr_mass_conversion_accepted
-							change_religion = catholic
-							add_unrest = 10
+							random_owned_province = {
+								limit = {
+									NOT = {
+										religion = catholic
+										has_province_flag = mr_mass_conversion_accepted
+									}
+								}
+								set_province_flag = mr_mass_conversion_accepted
+								change_religion = catholic
+								add_unrest = 10
+							}
+							random_owned_province = {
+								limit = {
+									NOT = {
+										religion = catholic
+										has_province_flag = mr_mass_conversion_accepted
+									}
+								}
+								set_province_flag = mr_mass_conversion_accepted
+								change_religion = catholic
+								add_unrest = 10
+							}
+							random_owned_province = {
+								limit = {
+									NOT = {
+										religion = catholic
+										has_province_flag = mr_mass_conversion_accepted
+									}
+								}
+								set_province_flag = mr_mass_conversion_accepted
+								change_religion = catholic
+								add_unrest = 10
+							}
+							random_owned_province = {
+								limit = {
+									NOT = {
+										religion = catholic
+										has_province_flag = mr_mass_conversion_accepted
+									}
+								}
+								set_province_flag = mr_mass_conversion_accepted
+								change_religion = catholic
+								add_unrest = 10
+							}
+							random_owned_province = {
+								limit = {
+									NOT = {
+										religion = catholic
+										has_province_flag = mr_mass_conversion_accepted
+									}
+								}
+								set_province_flag = mr_mass_conversion_accepted
+								change_religion = catholic
+								add_unrest = 10
+							}
+							random_owned_province = {
+								limit = {
+									NOT = {
+										religion = catholic
+										has_province_flag = mr_mass_conversion_accepted
+									}
+								}
+								set_province_flag = mr_mass_conversion_accepted
+								change_religion = catholic
+								add_unrest = 10
+							}
+							random_owned_province = {
+								limit = {
+									NOT = {
+										religion = catholic
+										has_province_flag = mr_mass_conversion_accepted
+									}
+								}
+								set_province_flag = mr_mass_conversion_accepted
+								change_religion = catholic
+								add_unrest = 10
+							}
+							random_owned_province = {
+								limit = {
+									NOT = {
+										religion = catholic
+										has_province_flag = mr_mass_conversion_accepted
+									}
+								}
+								set_province_flag = mr_mass_conversion_accepted
+								change_religion = catholic
+								add_unrest = 10
+							}
+							random_owned_province = {
+								limit = {
+									NOT = {
+										religion = catholic
+										has_province_flag = mr_mass_conversion_accepted
+									}
+								}
+								set_province_flag = mr_mass_conversion_accepted
+								change_religion = catholic
+								add_unrest = 10
+							}
+							random_owned_province = {
+								limit = {
+									NOT = {
+										religion = catholic
+										has_province_flag = mr_mass_conversion_accepted
+									}
+								}
+								set_province_flag = mr_mass_conversion_accepted
+								change_religion = catholic
+								add_unrest = 10
+							}
+							random_owned_province = {
+								limit = {
+									NOT = {
+										religion = catholic
+										has_province_flag = mr_mass_conversion_accepted
+									}
+								}
+								set_province_flag = mr_mass_conversion_accepted
+								change_religion = catholic
+								add_unrest = 10
+							}
+							random_owned_province = {
+								limit = {
+									NOT = {
+										religion = catholic
+										has_province_flag = mr_mass_conversion_accepted
+									}
+								}
+								set_province_flag = mr_mass_conversion_accepted
+								change_religion = catholic
+								add_unrest = 10
+							}
+							random_owned_province = {
+								limit = {
+									NOT = {
+										religion = catholic
+										has_province_flag = mr_mass_conversion_accepted
+									}
+								}
+								set_province_flag = mr_mass_conversion_accepted
+								change_religion = catholic
+								add_unrest = 10
+							}
+							random_owned_province = {
+								limit = {
+									NOT = {
+										religion = catholic
+										has_province_flag = mr_mass_conversion_accepted
+									}
+								}
+								set_province_flag = mr_mass_conversion_accepted
+								change_religion = catholic
+								add_unrest = 10
+							}
+							random_owned_province = {
+								limit = {
+									NOT = {
+										religion = catholic
+										has_province_flag = mr_mass_conversion_accepted
+									}
+								}
+								set_province_flag = mr_mass_conversion_accepted
+								change_religion = catholic
+								add_unrest = 10
+							}
+							random_owned_province = {
+								limit = {
+									NOT = {
+										religion = catholic
+										has_province_flag = mr_mass_conversion_accepted
+									}
+								}
+								set_province_flag = mr_mass_conversion_accepted
+								change_religion = catholic
+								add_unrest = 10
+							}
+							random_owned_province = {
+								limit = {
+									NOT = {
+										religion = catholic
+										has_province_flag = mr_mass_conversion_accepted
+									}
+								}
+								set_province_flag = mr_mass_conversion_accepted
+								change_religion = catholic
+								add_unrest = 10
+							}
+							random_owned_province = {
+								limit = {
+									NOT = {
+										religion = catholic
+										has_province_flag = mr_mass_conversion_accepted
+									}
+								}
+								set_province_flag = mr_mass_conversion_accepted
+								change_religion = catholic
+								add_unrest = 10
+							}
+							random_owned_province = {
+								limit = {
+									NOT = {
+										religion = catholic
+										has_province_flag = mr_mass_conversion_accepted
+									}
+								}
+								set_province_flag = mr_mass_conversion_accepted
+								change_religion = catholic
+								add_unrest = 10
+							}
+							random_owned_province = {
+								limit = {
+									NOT = {
+										religion = catholic
+										has_province_flag = mr_mass_conversion_accepted
+									}
+								}
+								set_province_flag = mr_mass_conversion_accepted
+								change_religion = catholic
+								add_unrest = 10
+							}
+							random_owned_province = {
+								limit = {
+									NOT = {
+										religion = catholic
+										has_province_flag = mr_mass_conversion_accepted
+									}
+								}
+								set_province_flag = mr_mass_conversion_accepted
+								change_religion = catholic
+								add_unrest = 10
+							}
 						}
-						random_owned_province = {
-							limit = {
-								NOT = {
-									religion = catholic
-									has_province_flag = mr_mass_conversion_accepted
+						50 = { # Less Aggressive (10 provinces)
+							random_owned_province = {
+								limit = {
+									NOT = {
+										religion = catholic
+										has_province_flag = mr_mass_conversion_accepted
+									}
 								}
+								set_province_flag = mr_mass_conversion_accepted
+								change_religion = catholic
+								add_unrest = 10
 							}
-							set_province_flag = mr_mass_conversion_accepted
-							change_religion = catholic
-							add_unrest = 10
-						}
-						random_owned_province = {
-							limit = {
-								NOT = {
-									religion = catholic
-									has_province_flag = mr_mass_conversion_accepted
+							random_owned_province = {
+								limit = {
+									NOT = {
+										religion = catholic
+										has_province_flag = mr_mass_conversion_accepted
+									}
 								}
+								set_province_flag = mr_mass_conversion_accepted
+								change_religion = catholic
+								add_unrest = 10
 							}
-							set_province_flag = mr_mass_conversion_accepted
-							change_religion = catholic
-							add_unrest = 10
-						}
-						random_owned_province = {
-							limit = {
-								NOT = {
-									religion = catholic
-									has_province_flag = mr_mass_conversion_accepted
+							random_owned_province = {
+								limit = {
+									NOT = {
+										religion = catholic
+										has_province_flag = mr_mass_conversion_accepted
+									}
 								}
+								set_province_flag = mr_mass_conversion_accepted
+								change_religion = catholic
+								add_unrest = 10
 							}
-							set_province_flag = mr_mass_conversion_accepted
-							change_religion = catholic
-							add_unrest = 10
-						}
-						random_owned_province = {
-							limit = {
-								NOT = {
-									religion = catholic
-									has_province_flag = mr_mass_conversion_accepted
+							random_owned_province = {
+								limit = {
+									NOT = {
+										religion = catholic
+										has_province_flag = mr_mass_conversion_accepted
+									}
 								}
+								set_province_flag = mr_mass_conversion_accepted
+								change_religion = catholic
+								add_unrest = 10
 							}
-							set_province_flag = mr_mass_conversion_accepted
-							change_religion = catholic
-							add_unrest = 10
-						}
-						random_owned_province = {
-							limit = {
-								NOT = {
-									religion = catholic
-									has_province_flag = mr_mass_conversion_accepted
+							random_owned_province = {
+								limit = {
+									NOT = {
+										religion = catholic
+										has_province_flag = mr_mass_conversion_accepted
+									}
 								}
+								set_province_flag = mr_mass_conversion_accepted
+								change_religion = catholic
+								add_unrest = 10
 							}
-							set_province_flag = mr_mass_conversion_accepted
-							change_religion = catholic
-							add_unrest = 10
-						}
-						random_owned_province = {
-							limit = {
-								NOT = {
-									religion = catholic
-									has_province_flag = mr_mass_conversion_accepted
+							random_owned_province = {
+								limit = {
+									NOT = {
+										religion = catholic
+										has_province_flag = mr_mass_conversion_accepted
+									}
 								}
+								set_province_flag = mr_mass_conversion_accepted
+								change_religion = catholic
+								add_unrest = 10
 							}
-							set_province_flag = mr_mass_conversion_accepted
-							change_religion = catholic
-							add_unrest = 10
-						}
-						random_owned_province = {
-							limit = {
-								NOT = {
-									religion = catholic
-									has_province_flag = mr_mass_conversion_accepted
+							random_owned_province = {
+								limit = {
+									NOT = {
+										religion = catholic
+										has_province_flag = mr_mass_conversion_accepted
+									}
 								}
+								set_province_flag = mr_mass_conversion_accepted
+								change_religion = catholic
+								add_unrest = 10
 							}
-							set_province_flag = mr_mass_conversion_accepted
-							change_religion = catholic
-							add_unrest = 10
-						}
-						random_owned_province = {
-							limit = {
-								NOT = {
-									religion = catholic
-									has_province_flag = mr_mass_conversion_accepted
+							random_owned_province = {
+								limit = {
+									NOT = {
+										religion = catholic
+										has_province_flag = mr_mass_conversion_accepted
+									}
 								}
+								set_province_flag = mr_mass_conversion_accepted
+								change_religion = catholic
+								add_unrest = 10
 							}
-							set_province_flag = mr_mass_conversion_accepted
-							change_religion = catholic
-							add_unrest = 10
-						}
-						random_owned_province = {
-							limit = {
-								NOT = {
-									religion = catholic
-									has_province_flag = mr_mass_conversion_accepted
+							random_owned_province = {
+								limit = {
+									NOT = {
+										religion = catholic
+										has_province_flag = mr_mass_conversion_accepted
+									}
 								}
+								set_province_flag = mr_mass_conversion_accepted
+								change_religion = catholic
+								add_unrest = 10
 							}
-							set_province_flag = mr_mass_conversion_accepted
-							change_religion = catholic
-							add_unrest = 10
-						}
-						random_owned_province = {
-							limit = {
-								NOT = {
-									religion = catholic
-									has_province_flag = mr_mass_conversion_accepted
+							random_owned_province = {
+								limit = {
+									NOT = {
+										religion = catholic
+										has_province_flag = mr_mass_conversion_accepted
+									}
 								}
+								set_province_flag = mr_mass_conversion_accepted
+								change_religion = catholic
+								add_unrest = 10
 							}
-							set_province_flag = mr_mass_conversion_accepted
-							change_religion = catholic
-							add_unrest = 10
-						}
-						random_owned_province = {
-							limit = {
-								NOT = {
-									religion = catholic
-									has_province_flag = mr_mass_conversion_accepted
-								}
-							}
-							set_province_flag = mr_mass_conversion_accepted
-							change_religion = catholic
-							add_unrest = 10
-						}
-						random_owned_province = {
-							limit = {
-								NOT = {
-									religion = catholic
-									has_province_flag = mr_mass_conversion_accepted
-								}
-							}
-							set_province_flag = mr_mass_conversion_accepted
-							change_religion = catholic
-							add_unrest = 10
-						}
-						random_owned_province = {
-							limit = {
-								NOT = {
-									religion = catholic
-									has_province_flag = mr_mass_conversion_accepted
-								}
-							}
-							set_province_flag = mr_mass_conversion_accepted
-							change_religion = catholic
-							add_unrest = 10
-						}
-						random_owned_province = {
-							limit = {
-								NOT = {
-									religion = catholic
-									has_province_flag = mr_mass_conversion_accepted
-								}
-							}
-							set_province_flag = mr_mass_conversion_accepted
-							change_religion = catholic
-							add_unrest = 10
-						}
-						random_owned_province = {
-							limit = {
-								NOT = {
-									religion = catholic
-									has_province_flag = mr_mass_conversion_accepted
-								}
-							}
-							set_province_flag = mr_mass_conversion_accepted
-							change_religion = catholic
-							add_unrest = 10
-						}
-						random_owned_province = {
-							limit = {
-								NOT = {
-									religion = catholic
-									has_province_flag = mr_mass_conversion_accepted
-								}
-							}
-							set_province_flag = mr_mass_conversion_accepted
-							change_religion = catholic
-							add_unrest = 10
-						}
-						random_owned_province = {
-							limit = {
-								NOT = {
-									religion = catholic
-									has_province_flag = mr_mass_conversion_accepted
-								}
-							}
-							set_province_flag = mr_mass_conversion_accepted
-							change_religion = catholic
-							add_unrest = 10
-						}
-						random_owned_province = {
-							limit = {
-								NOT = {
-									religion = catholic
-									has_province_flag = mr_mass_conversion_accepted
-								}
-							}
-							set_province_flag = mr_mass_conversion_accepted
-							change_religion = catholic
-							add_unrest = 10
-						}
-						random_owned_province = {
-							limit = {
-								NOT = {
-									religion = catholic
-									has_province_flag = mr_mass_conversion_accepted
-								}
-							}
-							set_province_flag = mr_mass_conversion_accepted
-							change_religion = catholic
-							add_unrest = 10
-						}
-						random_owned_province = {
-							limit = {
-								NOT = {
-									religion = catholic
-									has_province_flag = mr_mass_conversion_accepted
-								}
-							}
-							set_province_flag = mr_mass_conversion_accepted
-							change_religion = catholic
-							add_unrest = 10
-						}
-						random_owned_province = {
-							limit = {
-								NOT = {
-									religion = catholic
-									has_province_flag = mr_mass_conversion_accepted
-								}
-							}
-							set_province_flag = mr_mass_conversion_accepted
-							change_religion = catholic
-							add_unrest = 10
 						}
 					}
-					50 = { # Less Aggressive (10 provinces)
-						random_owned_province = {
-							limit = {
-								NOT = {
-									religion = catholic
-									has_province_flag = mr_mass_conversion_accepted
-								}
+				}
+			}
+
+			option = { # Passive Conversion
+				name = "mr_events.2.b"
+				ai_chance = { factor = 65 }
+				set_country_flag = mr_passive_conversion
+				add_prestige = 5
+				add_ruler_personality = pious_personality
+				capital_scope = {
+					if = {
+						limit = {
+							NOT = {
+								religion = catholic
+								has_province_flag = mr_conversion_accepted
 							}
-							set_province_flag = mr_mass_conversion_accepted
-							change_religion = catholic
-							add_unrest = 10
 						}
-						random_owned_province = {
-							limit = {
-								NOT = {
-									religion = catholic
-									has_province_flag = mr_mass_conversion_accepted
-								}
-							}
-							set_province_flag = mr_mass_conversion_accepted
-							change_religion = catholic
-							add_unrest = 10
-						}
-						random_owned_province = {
-							limit = {
-								NOT = {
-									religion = catholic
-									has_province_flag = mr_mass_conversion_accepted
-								}
-							}
-							set_province_flag = mr_mass_conversion_accepted
-							change_religion = catholic
-							add_unrest = 10
-						}
-						random_owned_province = {
-							limit = {
-								NOT = {
-									religion = catholic
-									has_province_flag = mr_mass_conversion_accepted
-								}
-							}
-							set_province_flag = mr_mass_conversion_accepted
-							change_religion = catholic
-							add_unrest = 10
-						}
-						random_owned_province = {
-							limit = {
-								NOT = {
-									religion = catholic
-									has_province_flag = mr_mass_conversion_accepted
-								}
-							}
-							set_province_flag = mr_mass_conversion_accepted
-							change_religion = catholic
-							add_unrest = 10
-						}
-						random_owned_province = {
-							limit = {
-								NOT = {
-									religion = catholic
-									has_province_flag = mr_mass_conversion_accepted
-								}
-							}
-							set_province_flag = mr_mass_conversion_accepted
-							change_religion = catholic
-							add_unrest = 10
-						}
-						random_owned_province = {
-							limit = {
-								NOT = {
-									religion = catholic
-									has_province_flag = mr_mass_conversion_accepted
-								}
-							}
-							set_province_flag = mr_mass_conversion_accepted
-							change_religion = catholic
-							add_unrest = 10
-						}
-						random_owned_province = {
-							limit = {
-								NOT = {
-									religion = catholic
-									has_province_flag = mr_mass_conversion_accepted
-								}
-							}
-							set_province_flag = mr_mass_conversion_accepted
-							change_religion = catholic
-							add_unrest = 10
-						}
-						random_owned_province = {
-							limit = {
-								NOT = {
-									religion = catholic
-									has_province_flag = mr_mass_conversion_accepted
-								}
-							}
-							set_province_flag = mr_mass_conversion_accepted
-							change_religion = catholic
-							add_unrest = 10
-						}
-						random_owned_province = {
-							limit = {
-								NOT = {
-									religion = catholic
-									has_province_flag = mr_mass_conversion_accepted
-								}
-							}
-							set_province_flag = mr_mass_conversion_accepted
-							change_religion = catholic
-							add_unrest = 10
+						set_province_flag = mr_conversion_accepted
+						change_religion = catholic
+					}
+				}
+				random_owned_province = {
+					limit = {
+						NOT = {
+							religion = catholic
+							has_province_flag = mr_conversion_accepted
 						}
 					}
+					set_province_flag = mr_conversion_accepted
+					change_religion = catholic
+					add_unrest = 2
 				}
 			}
 		}
 
-		option = { # Passive Conversion
-			name = "mr_events.2.b"
-			ai_chance = { factor = 65 }
-			set_country_flag = mr_passive_conversion
-			add_prestige = -10
-			add_ruler_personality = pious_personality
-			capital_scope = {
-				limit = {
-					NOT = {
-						religion = catholic
-						has_province_flag = mr_conversion_accepted
+	# Mexican Cultural Divide
+
+		country_event = {
+			id = mr_events.3
+			title = "mr_events.3.t"
+			desc = "mr_events.3.d"
+			picture = CULTURE_eventPicture
+
+			is_triggered_only = yes
+
+			option = { # Our Nation is Mexican
+				name = "mr_events.3.a"
+				ai_chance = { factor = 100 }
+				capital_scope = {
+					change_culture = mexican
+				}
+				custom_tooltip = mr_events_3_tt
+				hidden_effect = {
+					every_owned_province = {
+						limit = {
+							culture_group = iberian
+						}
+						change_culture = mexican
+						add_unrest = 5
 					}
 				}
-				set_province_flag = mr_conversion_accepted
-				change_religion = catholic
-			}
-			random_owned_province = {
-				limit = {
-					NOT = {
-						religion = catholic
-						has_province_flag = mr_conversion_accepted
-					}
-				}
-				set_province_flag = mr_conversion_accepted
-				change_religion = catholic
-				add_unrest = 2
+				add_stability = -2
+				add_prestige = -25
+				add_corruption = 1
 			}
 		}
-	}

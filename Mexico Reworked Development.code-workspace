@@ -5,6 +5,9 @@
 		},
 		{
 			"path": "..\\..\\logs"
+		},
+		{
+			"path": "..\\..\\..\\..\\..\\..\\..\\Steam\\steamapps\\common\\Europa Universalis IV\\map"
 		}
 	],
 	"settings": {}

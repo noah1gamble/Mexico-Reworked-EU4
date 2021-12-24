@@ -31,6 +31,10 @@ country_decisions = {
 				prestige = 80
 				stability = 1
 				OR = {
+					culture = mexican
+					dominant_culture = mexican
+				}
+				OR = {
 					has_country_flag = mr_founded_mexican_empire
 					total_development = 950
 					government_rank = 3
@@ -42,8 +46,8 @@ country_decisions = {
 			}
 			effect = {
 				set_country_flag = mr_founded_mexican_empire
-				custom_tooltip = mr_unlocked_founded_mexican_empire_tt
 				set_government_rank = 3
+				custom_tooltip = mr_unlocked_founded_mexican_empire_tt
 				add_prestige = 10
 				add_stability = 1
 			}
@@ -80,6 +84,10 @@ country_decisions = {
 				adm_tech = 15
 				is_at_war = no
 				stability = 1
+				OR = {
+					culture = mexican
+					dominant_culture = mexican
+				}
 				OR = {
 					government_rank = 3
 					has_country_flag = mr_founded_mexican_empire
@@ -161,31 +169,30 @@ country_decisions = {
 				tag = MEX
 				is_subject = no
 				owns = 852
-				NOT = {
-					has_country_flag = mr_founded_mexican_catholic_church
-					# has_great_project = catedral_metropolitana
-				}
+				NOT = { has_country_flag = mr_founded_mexican_catholic_church }
 			}
 			allow = {
-				owns = 852
 				is_at_war = no
 				stability = 1
 				prestige = 75
 				treasury = 500
 				monthly_income = 20
-				NOT = {
-					has_country_flag = mr_founded_mexican_catholic_church
+				owns = 852
+				OR = {
+					culture = mexican
+					dominant_culture = mexican
 				}
+				852 = { culture = mexican }
+				NOT = { has_country_flag = mr_founded_mexican_catholic_church }
 			}
 			effect = {
+				set_country_flag = mr_founded_mexican_catholic_church
 				add_treasury = -500
-				852 = {
-					add_great_project = {
-						type = catedral_metropolitana
-						instant = no
-					}
-				}
 				add_prestige = 10
+				add_country_modifier = {
+					name = mr_foundation_of_the_mexican_catholic_church_modifier
+					duration = 73000 # 200 Years
+				}
 			}
 			ai_will_do = {
 				factor = 1
@@ -206,12 +213,14 @@ country_decisions = {
 			}
 			allow = {
 				is_at_war = no
-				NOT = {
-					has_country_flag = mr_founded_mexico_city
-				}
 				stability = 1
-				prestige = 80
+				prestige = 65
 				owns = 852
+				OR = {
+					culture = mexican
+					dominant_culture = mexican
+				}
+				NOT = { has_country_flag = mr_founded_mexico_city }
 			}
 			effect = {
 				set_country_flag = mr_founded_mexico_city
@@ -240,11 +249,10 @@ country_decisions = {
 					has_country_flag = mr_cultural_divide
 				}
 				num_of_owned_provinces_with = {
-					value = 29
+					value = 25
 					region = mexico_region
-					NOT = {
-						culture = mexican
-					}
+					culture_group = iberian
+					NOT = { culture = mexican }
 				}
 			}
 			provinces_to_highlight = {
@@ -255,16 +263,26 @@ country_decisions = {
 			}
 			allow = {
 				adm_tech = 10
-				stability = 1
+				stability = 0
+				OR = {
+					culture = mexican
+					dominant_culture = mexican
+				}
 				num_of_owned_provinces_with = {
 					value = 30
 					colonial_region = colonial_mexico
+					culture_group = iberian
 					NOT = { culture = mexican }
 				}
 			}
 			effect = {
 				set_country_flag = mr_cultural_divide
-				add_prestige = 5
+				change_primary_culture = mexican
+				add_accepted_culture = mexican
+				set_ruler_culture = mexican
+				country_event = {
+					id = mr_events.3
+				}
 			}
 			ai_will_do = {
 				factor = 1
@@ -273,5 +291,6 @@ country_decisions = {
 		}
 
 	# Mexican Gold Reserves (Increases the Price of Gold and lowers Interest)
+
 	# The Dictatorship (Porfiriato) [https://en.wikipedia.org/wiki/Porfiriato]
 }

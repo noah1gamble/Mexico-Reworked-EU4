@@ -3,5 +3,6 @@ tags={
 	"Fixes"
 	"Gameplay"
 }
-name="Better Mexico"
+name="Mexico: Reworked"
 supported_version="1.32.2"
+remote_file_id="2692020827"

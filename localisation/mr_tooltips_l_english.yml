@@ -6,8 +6,11 @@
 
     mr_mexico_random_catholic_conversion_tt: "Various provinces will be converted to §YCatholic§! and gain §R10.00§! unrest."
 
-    mr_unlocked_founded_mexican_empire_tt: "Enables the §YFounded Mexican Empire§! country flag"
+    mr_unlocked_founded_mexican_empire_tt: "Enables §YFounded Mexican Empire§! country flag"
 
+    mr_unlocked_founded_mexican_catholic_church_tt: "Enables §YFounded Mexican Catholic Church§! country flag"
+
+    mr_events_3_tt: "Every province that is §YIberian§! will convert to §YMexican§! and gain §R5.00§! unrest."
 
  #############################
  # FLAG TOOLTIP LOCALISATION #
