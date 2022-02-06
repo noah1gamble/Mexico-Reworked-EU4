@@ -1,5 +1,8 @@
+namespace = mr_events
 
-	namespace = mr_events
+##################
+# Country Events #
+##################
 
 	# Mexican Identity Debate
 
@@ -37,6 +40,8 @@
 				add_prestige = 20
 			}
 		}
+
+	#
 
 	# Mass Conversion of Mexico (Converts various provinces, can spawn rebels)
 
@@ -449,6 +454,8 @@
 			}
 		}
 
+	#
+
 	# Mexican Cultural Divide
 
 		country_event = {
@@ -480,3 +487,186 @@
 				add_corruption = 1
 			}
 		}
+
+	#
+
+###################
+# Disaster Events #
+###################
+
+	# Mexican Revolution
+
+		# Start
+
+		country_event = {
+			id = mr_events.4
+			title = "mr_events.4.t"
+			desc = "mr_events.4.d"
+			picture = REVOLUTION_eventPicture
+
+			is_triggered_only = yes
+
+			option = { # Down with rebels!
+				name = "mr_events.4.a"
+				ai_chance = { factor = 100 }
+				set_country_flag = mr_had_mexican_revolution
+				random_owned_province = {
+					spawn_rebels = {
+						type = mex_porfiriato_rebels
+						size = 4
+						leader = rebel_preacher
+					}
+				}
+				random_owned_province = {
+					spawn_rebels = {
+						type = mex_porfiriato_rebels
+						size = 2
+						leader = rebel_preacher
+					}
+				}
+				add_prestige = -5
+			}
+		}
+
+		# End (Win, defeated the revolution)
+
+		country_event = {
+			id = mr_events.5
+			title = "mr_events.5.t"
+			desc = "mr_events.5.d"
+			picture = REVOLUTION_eventPicture
+
+			is_triggered_only = yes
+
+			option = { # Victory!
+				name = "mr_events.5.a"
+				ai_chance = { factor = 100 }
+				set_country_flag = mr_defeated_mexican_revolution
+				add_prestige = 10
+			}
+		}
+
+		# End (Loss, defeated by revolution, become dictatorship) The Dictatorship (Porfiriato) [https://en.wikipedia.org/wiki/Porfiriato]
+
+	#
+
+	# Economic Instability
+
+		# Start
+
+		country_event = {
+			id = mr_events.8
+			title = "mr_events.8.t"
+			desc = "mr_events.8.d"
+			picture = REVOLUTION_eventPicture
+
+			is_triggered_only = yes
+
+			option = { # The Economy you fools!
+				name = "mr_events.8.a"
+				ai_chance = { factor = 100 }
+				set_country_flag = mr_had_economic_instability
+			}
+		}
+
+		# End (Victory)
+
+		country_event = {
+			id = mr_events.9
+			title = "mr_events.9.t"
+			desc = "mr_events.9.d"
+			picture = REVOLUTION_eventPicture
+
+			is_triggered_only = yes
+
+			option = {
+				name = "mr_events.9.a"
+				ai_chance = { factor = 100 }
+			}
+		}
+
+		# End (Loss)
+
+	#
+
+#################
+# Random Events #
+#################
+
+	#######################
+	# Gold Related Events #
+	#######################
+
+		# Gold Reserves Crisis
+
+			country_event = {
+				id = mr_events.7
+				title = "mr_events.7.t"
+				desc = "mr_events.7.d"
+				picture = ECONOMY_eventPicture
+
+				mean_time_to_happen = {
+					months = 320
+				}
+
+				option = { # Cash out all gold mines
+					name = "mr_events.7.a"
+					ai_chance = { factor = 25 }
+					add_years_of_owned_provinces_production_income = {
+						years = 8
+						trigger = {
+							trade_goods = gold
+						}
+						custom_tooltip = mr_cashed_out_gold_mines
+					}
+					random_owned_province = {
+						limit = {
+							trade_goods = gold
+						}
+						change_trade_goods = random
+					}
+					add_inflation = 4
+				}
+
+				option = { # Invest in mining tech (40% chance to fail)
+					name = "mr_events.7.b"
+					ai_chance = { factor = 75 }
+					add_prestige = 10
+					add_treasury = -500 # Cost to invest in mining tech
+					random_list = {
+						60 = { # Improved Mining Technologies
+							change_price = {
+								trade_goods = gold
+								key = mr_improved_mining_ideas
+								value = 0.15
+								duration = 3650
+							}
+							add_prestige = 5
+							add_inflation = 1
+						}
+						40 = { # Failed to expand mining ideas, increased inflation and depletion of gold
+							change_price = {
+								trade_goods = gold
+								key = mr_failed_mining_ideas
+								value = -0.05
+								duration = 1825
+							}
+							every_owned_province = {
+								limit = {
+									trade_goods = gold
+								}
+								change_trade_goods = random
+							}
+							add_inflation = 2
+							add_prestige = -10
+						}
+					}
+				}
+			}
+
+		# Inflation Increased due to gold production
+
+		# Gain up to 3 provinces with gold (Gold Standard Improved)
+
+	#
+

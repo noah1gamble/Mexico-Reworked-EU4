@@ -3,8 +3,15 @@ spriteTypes = {
 	# Catedral Metropolitana
 
 	spriteType = {
-		name = "GFX_great_project_catedral_metropolitana"
-		texturefile = "gfx//interface//great_projects//great_project_catedral_metropolitana.dds"
+		name = "GFX_great_project_mr_catedral_metropolitana"
+		texturefile = "gfx//interface//great_projects//great_project_mr_catedral_metropolitana.dds"
+	}
+
+	# Castle San Juan
+
+	spriteType = {
+		name = "GFX_great_project_mr_castle_san_juan"
+		texturefile = "gfx//interface//great_projects//great_project_mr_castle_san_juan.dds"
 	}
 
 }

@@ -1,0 +1,82 @@
+mr_economic_instability = {
+	potential = {
+		NOT = { has_country_flag = mr_had_economic_instability }
+		is_free_or_tributary_trigger = yes
+		tag = MEX
+		MEX = { total_development = 500 }
+	}
+
+	can_start = {
+		has_any_disaster = no
+		gold_income = 5
+	}
+
+	can_stop = {
+		has_any_disaster = yes
+	}
+
+	progress = {
+		modifier = {
+			factor = 4
+			NOT = { has_idea_group = economic_ideas }
+		}
+		modifier = { # Gold Reliance
+			factor = 3
+			gold_income = 15
+		}
+		modifier = { # Gold Reliance
+			factor = 2
+			gold_income = 8
+		}
+		modifier = {
+			factor = 2
+			NOT = { adm = 4 }
+		}
+		modifier = { # Gold Reliance
+			factor = 1
+			gold_income = 1
+		}
+		modifier = {
+			factor = 1
+			AND = {
+				NOT = {
+					employed_advisor = {
+						category = ADM
+						type = treasurer
+					}
+				}
+				treasurer = 2
+			}
+		}
+	}
+
+	can_end = {
+		AND = {
+			has_idea_group = economic_ideas
+			adm = 4
+			employed_advisor = {
+				category = ADM
+				type = treasurer
+			}
+			treasurer = 2
+		}
+	}
+
+
+	modifier = {
+		global_unrest = 2
+		inflation_reduction = -1.0
+		monthly_gold_inflation_modifier = 0.05
+	}
+
+	on_start = mr_events.8
+	on_end = mr_events.9
+
+	on_monthly = {
+		events = {
+		}
+		random_events = {
+		}
+	}
+}
+

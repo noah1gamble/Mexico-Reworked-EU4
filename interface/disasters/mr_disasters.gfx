@@ -1,0 +1,14 @@
+spriteTypes = {
+    spriteType = {
+        name = "GFX_disaster_mr_mexican_revolution"
+        texturefile = "gfx//interface//disasters//mr_mexican_revolution.dds"
+        noOfFrames = 3
+        loadType = "INGAME"
+    }
+    spriteType = {
+        name = "GFX_disaster_mr_economic_instability"
+        texturefile = "gfx//interface//disasters//mr_economic_instability.dds"
+        noOfFrames = 3
+        loadType = "INGAME"
+    }
+}

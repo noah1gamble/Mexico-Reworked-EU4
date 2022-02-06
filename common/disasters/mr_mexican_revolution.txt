@@ -1,0 +1,73 @@
+mr_mexican_revolution = {
+	potential = {
+		NOT = { has_country_flag = mr_had_mexican_revolution }
+		is_free_or_tributary_trigger = yes
+		total_development = 650
+		tag = MEX
+	}
+
+	can_start = {
+		has_any_disaster = no
+		total_development = 700
+		NOT = { stability = 1 }
+		unrest = 1
+	}
+
+	can_stop = {
+		has_any_disaster = yes
+	}
+
+
+	progress = {
+		modifier = {
+			factor = 1
+			government = republic
+			NOT = {
+				OR = {
+					has_reform = presidential_despot_reform
+					has_reform = military_dictatorship_reform
+					has_reform = military_electorate_reform
+				}
+			}
+		}
+		modifier = {
+			factor = 5
+			government = monarchy
+		}
+		modifier = {
+			factor = 10
+			government = theocracy
+		}
+	}
+
+	can_end = {
+		OR = {
+			AND = {
+				government = republic
+				OR = {
+					has_reform = presidential_despot_reform
+					has_reform = military_dictatorship_reform
+					has_reform = military_electorate_reform
+				}
+			}
+			has_country_flag = mr_defeated_mexican_revolution
+		}
+	}
+
+
+	modifier = {
+		general_cost = 0.10
+		admiral_cost = 0.10
+	}
+
+	on_start = mr_events.4
+	on_end = mr_events.5
+
+	on_monthly = {
+		events = {
+		}
+		random_events = {
+		}
+	}
+}
+

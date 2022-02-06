@@ -1,0 +1,181 @@
+﻿l_english:
+
+  # Country Names
+
+    # Empire of Mexico
+
+      mr_empire_of_mexico: "Empire of Mexico"
+
+    # Mexican Empire
+
+      mr_mexican_empire: "Mexican Empire"
+
+  #########################
+  # DECISION LOCALISATION #
+  #########################
+
+    # The Empire of Mexico
+
+      mr_the_empire_of_mexico_title: "The Empire of Mexico"
+      mr_the_empire_of_mexico_desc: "We have secured the vital lands of Mexico and are truly a nation able to claim the status of Empire!"
+
+    # Catholic Revival
+
+      mr_catholic_revival_title: "Revive Catholisism in Mexico"
+      mr_catholic_revival_desc: "We must restore catholic rule to Mexico and now allow heathens and heratics to rule this land!"
+
+    # Found Mexico City
+
+      mr_found_mexico_city_title: "Foundation of Mexico City"
+      mr_found_mexico_city_desc: "We own many rich lands, but our capital is the most prosperous of them all.\n\nOur glorious nation deserves a historical name for it's capital and as such we shall rename the capital to 'Mexico City' and improve local infrastructure for all to enjoy."
+
+    # Found The Mexican Catholic Church
+
+      mr_found_the_mexican_catholic_church_title: "The Mexican Catholic Church"
+      mr_found_the_mexican_catholic_church_desc: ""
+
+    # Proclaim the Empire of Mexico
+
+      mr_proclaim_empire_of_mexico_title: "Proclaim The Empire of Mexico"
+      mr_proclaim_empire_of_mexico_desc: "All nations will be aware of our national pride and power!"
+
+    # Cultural Divide
+
+      mr_cultural_divide_title: "Iberian Divide"
+      mr_cultural_divide_desc: "Our populace is anything but Mexican.. This is an unacceptable situation and must be dealt with severely!"
+
+ ##########################
+ # DISASTERS LOCALISATION #
+ ##########################
+
+    # The Mexican Revolution
+
+      mr_mexican_revolution: "Mexican Revolution"
+      mr_mexican_revolution_desc: ""
+
+    # Economic Instability
+
+      mr_economic_instability: "Economic Instability"
+      mr_economic_instability_desc: ""
+
+ #######################
+ # EVENTS LOCALISATION #
+ #######################
+
+    ##################
+    # Country Events #
+    ##################
+
+        # Foundation of Empire of Mexico
+
+          mr_events.1: "Mexican Identity Debate"
+          mr_events.1.t: "Mexican Identity Debate"
+          mr_events.1.d: "After much debate it has come to our attention that as an empire, we lack the formal recognition of other Great Powers as such, it is perhaps best to let these fools know of the greatness of Mexico!\n\nWe can change our name to either the Empire of Mexico, the Mexican Empire, or not worry about such petty imperialist nonsense."
+          mr_events.1.a: "The Empire of Mexico!"
+          mr_events.1.b: "The Mexican Empire!"
+          mr_events.1.c: "Remain as Mexico."
+
+        # The Mass Conversion of Mexico
+
+          mr_events.2: "Mass Conversion of Mexico"
+          mr_events.2.t: "Mass Conversion of Mexico"
+          mr_events.2.d: "With the passing of a new national policy enacting the state religion as Catholic many people are prepared to revolt, but there is much to be done and little time to worry about such things."
+          mr_events.2.a: "All heretics must die!"
+          mr_events.2.b: "We will achieve harmony through peace."
+
+        # The Iberian Divide
+
+          mr_events.3: "The Iberian Divide"
+          mr_events.3.t: "The Iberian Divide"
+          mr_events.3.d: "Our people are vastly §YIberian§! and not §YMexican§! causing some undue burden upon our fragile geopolitical system therefore it is prudent to deal with this problem directly through arranged marriages of locals among other techniques employed directly by the Mexican Government."
+          mr_events.3.a: "As it should be!"
+
+    ###################
+    # Disaster Events #
+    ###################
+
+      # Mexican Revolution
+
+        mr_events.4: "The Mexican Revolution"
+        mr_events.4.t: "The Mexican Revolution"
+        mr_events.4.d: "A long and bloody struggle among several factions in constantly shifting alliances which resulted ultimately in the end of the 30-year dictatorship in Mexico and the establishment of a constitutional republic."
+        mr_events.4.a: "Para la porfiriato!"
+
+      # Economic Instability
+
+        mr_events.8: "Economic Instability"
+        mr_events.8.t: "Economic Instability"
+        mr_events.8.d: "SOME BITCHES NEED MONEY"
+        mr_events.8.a: "The Economy you fools!"
+
+    #########################
+    # Random Country Events #
+    #########################
+
+      # Gold Reserves Crisis
+
+        mr_events.7: "Gold Reserve Crisis"
+        mr_events.7.t: "Gold Reserve Crisis"
+        mr_events.7.d: "With the economy beginning to taper we are pressed with the decision on what to do with our aging gold mines; Lacking in any true infrastructure or investment gives us no choice but to either collect all current gold reserves and centralize it or invest heavily in possible solutions."
+        mr_events.7.a: "Cash out all reserves!"
+        mr_events.7.b: "Invest in mining advancements."
+
+ ##############################
+ # GREAT PROJECT LOCALISATION #
+ ##############################
+
+  mr_catedral_metropolitana: "Catedral Metropolitana"
+
+  mr_castle_san_juan: "Fortress of San Juan de Ulua"
+
+ ##########################
+ # MODIFIERS LOCALISATION #
+ ##########################
+
+    # The Mexican Catholic Church
+
+      mr_foundation_of_the_mexican_catholic_church_modifier: "Foundation of the Mexican Catholic Church"
+      mr_foundation_of_the_mexican_catholic_church_modifier_desc: ""
+
+  ######################
+  # Rebel Localisation #
+  ######################
+
+    mex_porfiriato_rebels_name: "Porfiriato Supporters"
+    mex_porfiriato_rebels_title: "Porfiriato Rebels"
+    mex_porfiriato_rebels_desc: "The Porfiriato Supporters seek to install a Military Dictatorship"
+    mex_porfiriato_rebels_army: "Porfiriato Militia"
+
+  #########################
+  # TOOLTIPS LOCALISATION #
+  #########################
+
+    mr_mexico_random_catholic_conversion_tt: "Various provinces will be converted to §YCatholic§! and gain §R10.00§! unrest."
+
+    mr_unlocked_founded_mexican_empire_tt: "Enables §YFounded Mexican Empire§! country flag"
+
+    mr_unlocked_founded_mexican_catholic_church_tt: "Enables §YFounded Mexican Catholic Church§! country flag"
+
+    mr_events_3_tt: "Every province that is §YIberian§! will convert to §YMexican§! and gain §R5.00§! unrest."
+
+
+  #############################
+  # FLAG TOOLTIP LOCALISATION #
+  #############################
+
+    mr_proclaimed_mexican_empire: "Proclaimed Mexican Empire"
+
+    mr_founded_mexico_city: "Founded Mexico City"
+
+    mr_founded_mexican_catholic_church: "Founded Mexican Catholic Church"
+
+    mr_founded_mexican_empire: "Founded Mexican Empire"
+
+
+  ###########################
+  # TRADE GOOD LOCALISATION #
+  ###########################
+
+    mr_cashed_out_gold_mines: "from cashing out all gold reserves."
+
+    mr_improved_mining_ideas: "Improved mining technologies"
